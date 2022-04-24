@@ -1,4 +1,4 @@
-package com.example.cleanarchitecture.infrastructure;
+package com.example.cleanarchitecture.domains.common.infrastructure;
 
 
 import com.example.cleanarchitecture.domains.products.interfaces.adapters.EnvironmentVariables;

@@ -6,8 +6,9 @@ import com.example.cleanarchitecture.domains.products.interfaces.adapters.Enviro
 import com.example.cleanarchitecture.domains.products.interfaces.adapters.HttpClientCall;
 
 public class ProductClient implements ProductRepository {
-    HttpClientCall client;
-    EnvironmentVariables env;
+    private final String BASE_URL_KEY = "meli.baseurl";
+    private final EnvironmentVariables env;
+    private final HttpClientCall client;
 
     public ProductClient(HttpClientCall client, EnvironmentVariables env) {
         this.client = client;
@@ -17,7 +18,7 @@ public class ProductClient implements ProductRepository {
     @Override
     public ProductDTO getById(String id) {
         final StringBuilder stringBuilder = new StringBuilder();
-        final String url = String.format(stringBuilder.append(env.get("meli.baseurl")).append(urls.SEARCH_BY_ID_URI).toString(), id);
+        final String url = String.format(stringBuilder.append(env.get(BASE_URL_KEY)).append(urls.SEARCH_BY_ID_URI).toString(), id);
         return client.callToGetMethod(url, ProductDTO.class);
     }
 }

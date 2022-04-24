@@ -7,9 +7,11 @@ public class ProductDTO {
     private String id;
     private String title;
     private double price;
-    private String currencyId;
+    private String currency_id;
     private String thumbnail;
     private String condition;
-    private String shipping;
+    private ShippingDTO shipping;
     private String address;
+
+
 }

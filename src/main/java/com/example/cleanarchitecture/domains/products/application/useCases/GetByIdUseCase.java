@@ -7,12 +7,14 @@ import com.example.cleanarchitecture.domains.products.application.mappers.Produc
 public class GetByIdUseCase {
 
     private final ProductRepository repository;
+    private final ProductMapper mapper;
 
-    public GetByIdUseCase(ProductRepository repository) {
+    public GetByIdUseCase(ProductRepository repository, ProductMapper mapper) {
         this.repository = repository;
+        this.mapper = mapper;
     }
 
     public Product execute(String id) {
-        return ProductMapper.toProduct(repository.getById(id));
+        return mapper.toProduct(repository.getById(id));
     }
 }
