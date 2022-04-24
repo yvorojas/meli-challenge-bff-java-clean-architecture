@@ -1,4 +1,4 @@
-package com.example.cleanarchitecture.domains.products.interfaces.gateway;
+package com.example.cleanarchitecture.domains.products.interfaces.gateways;
 
 import com.example.cleanarchitecture.domains.products.application.adapters.ProductRepository;
 import com.example.cleanarchitecture.domains.products.application.entities.DTOs.ProductDTO;

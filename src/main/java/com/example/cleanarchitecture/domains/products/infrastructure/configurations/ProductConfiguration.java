@@ -10,7 +10,7 @@ import com.example.cleanarchitecture.domains.products.application.useCases.GetBy
 import com.example.cleanarchitecture.domains.products.interfaces.adapters.EnvironmentVariables;
 import com.example.cleanarchitecture.domains.products.interfaces.adapters.HttpClientCall;
 import com.example.cleanarchitecture.domains.products.interfaces.controllers.ProductController;
-import com.example.cleanarchitecture.domains.products.interfaces.gateway.ProductClient;
+import com.example.cleanarchitecture.domains.products.interfaces.gateways.ProductClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
